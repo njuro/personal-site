@@ -7,7 +7,7 @@ const FooterContainer: React.FC<SegmentProps> = styled(Segment)`
   text-align: center;
   font-size: 14px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 40px;
   display: block;
   color: gray;
 
@@ -24,13 +24,9 @@ function Footer() {
       <a href="https://reactjs.org" target="_blank" rel="noreferrer">
         React
       </a>
-      , template by{" "}
-      <a
-        href="https://github.com/semantic-ui-forest"
-        target="_blank"
-        rel="noreferrer"
-      >
-        @Semantic-UI-Forest
+      , UI components by{" "}
+      <a href="https://react.semantic-ui.com/" target="_blank" rel="noreferrer">
+        Semantic UI
       </a>
       . &copy; 2021 Juraj Noge
     </FooterContainer>

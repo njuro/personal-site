@@ -1,7 +1,10 @@
 import React from "react";
 import { Icon, Image } from "semantic-ui-react";
+import useNavigation from "../useNavigation";
+import { HOME_URL } from "../mappings";
 
 function Home() {
+  useNavigation(HOME_URL);
   const pronunciation = new Audio("/juraj-noge.mp3");
 
   return (
@@ -24,7 +27,7 @@ function Home() {
           link
           onClick={() => pronunciation.play()}
         />
-        and I am what they call an Software Engineer.
+        and I am what they call a Software Engineer.
       </p>
       <p>
         I work mostly with <strong>Java</strong>, <strong>Kotlin</strong> and{" "}

@@ -5,5 +5,6 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": 0,
     "import/no-cycle": 0,
     "@typescript-eslint/no-unused-vars": 1,
+    "react/jsx-props-no-spreading": 0,
   },
 };

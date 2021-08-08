@@ -1,9 +1,11 @@
 import React from "react";
 import { Header, Menu, Segment } from "semantic-ui-react";
 import styled from "styled-components";
+import MenuItem from "./MenuItem";
+import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";
 
 const MenuContainer = styled(Menu)`
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1000px) {
     float: right !important;
   }
 
@@ -22,12 +24,18 @@ function TopMenu() {
         </Header>
       </header>
       <MenuContainer pointing secondary stackable>
-        <Menu.Item active link>
+        <MenuItem path={HOME_URL} link>
           Home
-        </Menu.Item>
-        <Menu.Item link>About</Menu.Item>
-        <Menu.Item link>Projects</Menu.Item>
-        <Menu.Item link>Contact</Menu.Item>
+        </MenuItem>
+        <MenuItem path={ABOUT_URL} link>
+          About
+        </MenuItem>
+        <MenuItem path={PROJECTS_URL} link>
+          Projects
+        </MenuItem>
+        <MenuItem path={CONTACT_URL} link>
+          Contact
+        </MenuItem>
       </MenuContainer>
     </Segment>
   );
