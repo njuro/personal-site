@@ -1,8 +1,9 @@
 import React from "react";
-import { Header } from "semantic-ui-react";
+import { Header, Icon, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import useNavigation from "../useNavigation";
-import { ABOUT_URL } from "../mappings";
-import Tooltip, { TooltipTrigger } from "./Tooltip";
+import { ABOUT_URL, CONTACT_URL } from "../mappings";
+import Tooltip from "./Tooltip";
 import Goodreads from "./Goodreads";
 
 function About() {
@@ -21,8 +22,8 @@ function About() {
         programmer began before I even realized. Then, at age of 10, my dad
         brought me a book from his job about{" "}
         <Tooltip
-          content={"Yes, I know these aren't programming languages, shhh"}
-          trigger={<TooltipTrigger>HTML and CSS</TooltipTrigger>}
+          content="Yes, I know these aren't programming languages, shhh"
+          trigger="HTML and CSS"
         />{" "}
         (released before I was born) and the never-ending learning process has
         officially started.
@@ -45,20 +46,27 @@ function About() {
               Term borrowed from <em>Pragmatic Programmer</em> book
             </>
           }
-          trigger={<TooltipTrigger>Knowledge Portfolio</TooltipTrigger>}
+          trigger="Knowledge Portfolio"
         />{" "}
         further.
       </p>
       <p>
         I am also familiar with the various tools software developers use in
-        their everyday lives, such as git, Docker, CI/CD pipelines and so on -
-        check out my CV for more details.
+        their everyday lives, such as <em>git, Docker, CI/CD pipelines</em> and
+        so on - check out my CV for more details.
       </p>
       <Header as="h2">Do you have something to prove it?</Header>
       <p>
         I have been paid to make applications for others for some time now, but
-        respecting the DRY principle I will refer you to my LinkedIn for that
-        part.
+        respecting the <Tooltip content="Don't Repeat Yourself" trigger="DRY" />{" "}
+        principle I will refer you to my{" "}
+        <Link
+          to="https://www.linkedin.com/in/juraj-noge#oc-background-section"
+          className="content-link"
+        >
+          LinkedIn
+        </Link>{" "}
+        for that part.
       </p>
       <p>
         I also made an effort to document my hobby/side projects on this
@@ -81,40 +89,59 @@ function About() {
         <Goodreads />
       </p>
       <Header as="h2">What is your current favorite...?</Header>
-      <Header as="h4">Operation system?</Header>
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        Operation system?
+      </Header>
       <p>
         Linux. I am running Ubuntu 20.04 LTS with Cinnamon DE and it{" "}
         <Tooltip
           content="...most of the time"
           trigger={
-            <TooltipTrigger>
+            <>
               <em>Just Works&trade;</em>
-            </TooltipTrigger>
+            </>
           }
         />
       </p>
-      <Header as="h4">Programming language?</Header>
+
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        Programming language?
+      </Header>
       <p>
         Kotlin. I love the combination of simplicity + static typing + full
         interoperability with Java
       </p>
-      <Header as="h4">IDE?</Header>
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        IDE?
+      </Header>
       <p>
         IntelliJ IDEA Ultimate - or anything from JetBrains, really. These guys
         know their craft really well (no wonder they created the most amazing
         programming language too!)
       </p>
-      <Header as="h4">Browser?</Header>
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        Browser?
+      </Header>
       <p>
         Mozilla Firefox. I just wish they would get their priorities straight
         and stop trying to be Chrome 2.0
       </p>
-      <Header as="h4">Compound lift?</Header>
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        Compound lift?
+      </Header>
       <p>
         Overhead press (OHP) - there is something primal and raw about pushing a
         heavy weight above your head
       </p>
-      <Header as="h4">TV Show?</Header>
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        TV Show?
+      </Header>
       <p>
         I loved watching Breaking Bad, Mr. Robot, or House of Cards. Right now I
         am excited for the final season of La Casa De Papel.
@@ -142,9 +169,24 @@ function About() {
         My other spare time activities include avid book reading (although I
         have yet to recover the attention span I had as an early teenager),
         going to the pub with friends, or attending a rave/rap concert/festival.
+        <Image
+          rounded
+          size="medium"
+          src="/images/beach-volleyball.jpg"
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        />
       </p>
       <Header as="h2">How can I reach you?</Header>
-      <p>See Contacts</p>
+      <p>
+        See{" "}
+        <Link to={CONTACT_URL} className="content-link">
+          Contacts
+        </Link>
+        .
+      </p>
     </div>
   );
 }

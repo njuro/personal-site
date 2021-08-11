@@ -1,7 +1,8 @@
 import React from "react";
 import { Icon, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import useNavigation from "../useNavigation";
-import { HOME_URL } from "../mappings";
+import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";
 
 function Home() {
   useNavigation(HOME_URL);
@@ -12,7 +13,7 @@ function Home() {
       <Image
         circular
         size="medium"
-        src="/profile-picture.jpg"
+        src="/images/profile-picture.jpg"
         style={{
           marginLeft: "auto",
           marginRight: "auto",
@@ -34,7 +35,21 @@ function Home() {
         <strong>Spring Framework</strong>, although I am up for any fun
         challenge.
       </p>
-      <p>So read my Bio, check out my Projects and feel free to Contact me!</p>
+      <p>
+        So read my{" "}
+        <Link to={ABOUT_URL} className="content-link">
+          Bio
+        </Link>
+        , check out my{" "}
+        <Link to={PROJECTS_URL} className="content-link">
+          Projects
+        </Link>{" "}
+        and feel free to{" "}
+        <Link to={CONTACT_URL} className="content-link">
+          Contact
+        </Link>{" "}
+        me!
+      </p>
     </div>
   );
 }

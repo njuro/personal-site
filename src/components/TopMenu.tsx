@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Header, Menu, MenuItemProps, Segment } from "semantic-ui-react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";
 import { NavigationContext } from "./App";
 
@@ -40,10 +40,12 @@ function TopMenu() {
   return (
     <Segment vertical style={{ marginTop: "20px", marginBottom: "20px" }}>
       <header style={{ display: "inline-block", paddingTop: "14px" }}>
-        <Header as="h1">
-          Juraj Noge
-          <Header.Subheader>Software Engineer</Header.Subheader>
-        </Header>
+        <Link to={HOME_URL} className="header-link">
+          <Header as="h1">
+            Juraj Noge
+            <Header.Subheader>Software Engineer</Header.Subheader>
+          </Header>
+        </Link>
       </header>
       <MenuContainer pointing secondary stackable>
         <MenuItem path={HOME_URL} link>

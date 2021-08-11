@@ -13,6 +13,11 @@ const FooterContainer: React.FC<SegmentProps> = styled(Segment)`
 
   a {
     color: white;
+
+    :hover,
+    :active {
+      color: lightgray;
+    }
   }
 `;
 function Footer() {

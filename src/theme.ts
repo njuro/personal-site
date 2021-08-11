@@ -25,6 +25,28 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${primaryColor} !important;
   }
   
+  a.link:hover {
+    font-weight: bold !important;
+  }
+  
+  a.header-link {
+    :hover,
+    :active {
+      h1 {
+        color: lightgray !important;
+      }
+    }
+  }
+  
+  a.content-link {
+    color: ${secondaryColor} !important;
+    padding-bottom: 1px !important;
+    border-bottom: 1px solid gray !important;
+    :hover, :active {
+      font-weight: bold !important;
+    }
+  }
+  
   .ui.header, ui.segment {
     background-color: ${primaryColor} !important;
     color: ${secondaryColor} !important;

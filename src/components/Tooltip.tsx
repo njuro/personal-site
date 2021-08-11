@@ -19,7 +19,7 @@ function Tooltip({ content, trigger }: TooltipProps) {
       positionFixed
       inverted
       content={content}
-      trigger={trigger}
+      trigger={<TooltipTrigger>{trigger}</TooltipTrigger>}
     />
   );
 }
