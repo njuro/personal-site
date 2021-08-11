@@ -5,7 +5,6 @@ import { Container } from "semantic-ui-react";
 import { BrowserRouter as Router } from "react-router-dom";
 import TopMenu from "./TopMenu";
 import { GlobalStyle, theme } from "../theme";
-import Home from "./Home";
 import Footer from "./Footer";
 import NavigationSwitch from "./NavigationSwitch";
 
@@ -37,7 +36,10 @@ function App() {
               <TopMenu />
             </nav>
             <main>
-              <Container text>
+              <Container
+                text
+                style={{ display: "block", padding: "30px", minWidth: "80%" }}
+              >
                 <NavigationSwitch />
               </Container>
             </main>

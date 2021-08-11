@@ -1,8 +1,30 @@
-import React from "react";
-import { Header, Menu, Segment } from "semantic-ui-react";
+import React, { useContext } from "react";
+import { Header, Menu, MenuItemProps, Segment } from "semantic-ui-react";
 import styled from "styled-components";
-import MenuItem from "./MenuItem";
+import { useHistory } from "react-router-dom";
 import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";
+import { NavigationContext } from "./App";
+
+function MenuItem({ path, children, ...rest }: MenuItemProps) {
+  const history = useHistory();
+  const { activePath } = useContext(NavigationContext);
+
+  return (
+    <Menu.Item
+      name={path}
+      active={activePath === path}
+      onClick={() => path && history.push(path)}
+      onAuxClick={(event: React.MouseEvent<HTMLAnchorElement>) => {
+        if (path && event.button === 1) {
+          window.open(path, "_blank");
+        }
+      }}
+      {...rest}
+    >
+      {children}
+    </Menu.Item>
+  );
+}
 
 const MenuContainer = styled(Menu)`
   @media only screen and (min-width: 1000px) {
@@ -20,7 +42,7 @@ function TopMenu() {
       <header style={{ display: "inline-block", paddingTop: "14px" }}>
         <Header as="h1">
           Juraj Noge
-          <Header.Subheader inverted>Software Engineer</Header.Subheader>
+          <Header.Subheader>Software Engineer</Header.Subheader>
         </Header>
       </header>
       <MenuContainer pointing secondary stackable>

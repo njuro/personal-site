@@ -17,7 +17,7 @@ const FooterContainer: React.FC<SegmentProps> = styled(Segment)`
 `;
 function Footer() {
   return (
-    <FooterContainer inverted vertical as="footer">
+    <FooterContainer vertical as="footer">
       Created with&nbsp;
       <Icon name="heart" />
       and&nbsp;
