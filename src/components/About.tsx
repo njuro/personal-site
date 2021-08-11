@@ -60,12 +60,14 @@ function About() {
         I have been paid to make applications for others for some time now, but
         respecting the <Tooltip content="Don't Repeat Yourself" trigger="DRY" />{" "}
         principle I will refer you to my{" "}
-        <Link
-          to="https://www.linkedin.com/in/juraj-noge#oc-background-section"
+        <a
+          href="https://www.linkedin.com/in/juraj-noge#oc-background-section"
           className="content-link"
+          target="_blank"
+          rel="noreferrer"
         >
           LinkedIn
-        </Link>{" "}
+        </a>{" "}
         for that part.
       </p>
       <p>
@@ -169,15 +171,28 @@ function About() {
         My other spare time activities include avid book reading (although I
         have yet to recover the attention span I had as an early teenager),
         going to the pub with friends, or attending a rave/rap concert/festival.
-        <Image
-          rounded
-          size="medium"
-          src="/images/beach-volleyball.jpg"
+        <br />
+        <div
           style={{
-            marginLeft: "auto",
-            marginRight: "auto",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
           }}
-        />
+        >
+          <Image
+            rounded
+            size="medium"
+            src="/images/beach-volleyball.jpg"
+            style={{ marginTop: "20px" }}
+          />
+          <Image
+            rounded
+            size="medium"
+            src="/images/books.jpg"
+            style={{ marginTop: "20px" }}
+          />
+        </div>
       </p>
       <Header as="h2">How can I reach you?</Header>
       <p>

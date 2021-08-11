@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from "react";
-import Parser from "rss-parser";
 import moment from "moment";
 
 interface Book {
@@ -7,48 +6,34 @@ interface Book {
   author: string;
   year: number;
   started: string;
-  [key: string]: unknown;
 }
 function Goodreads() {
-  const CORS_PROXY = "https://api.codetabs.com/v1/proxy/?quest=";
+  const AUTHOR_PATTERN = useMemo(() => /author:\s+(.+)<br\/?>/i, []);
+  const YEAR_PATTERN = useMemo(() => /book published:\s+(.+)<br\/?>/i, []);
+  const STARTED_PATTERN = useMemo(() => /date added:\s+(.+)<br\/?>/, []);
   const url =
-    "https://www.goodreads.com/review/list_rss/80333251?shelf=currently-reading";
-  const parser = useMemo(
-    () =>
-      new Parser<{ [key: string]: unknown }, Book>({
-        customFields: {
-          item: [
-            ["author_name", "author"],
-            ["book_published", "year"],
-            ["user_date_added", "started"],
-          ],
-        },
-        headers: {
-          "User-Agent": "",
-        },
-      }),
-    []
-  );
+    "https://api.rss2json.com/v1/api.json?rss_url=https://www.goodreads.com/review/list_rss/80333251?shelf=currently-reading";
   const [book, setBook] = useState<Book | null | undefined>(undefined);
 
   useEffect(() => {
-    parser
-      .parseURL(CORS_PROXY + url)
-      .then((feed) => {
-        if (feed.items.length > 0) {
-          const item = feed.items[0];
+    fetch(url)
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.items.length > 0) {
+          const item = data.items[0];
+          const { title, content } = item;
           setBook({
-            title: item.title,
-            author: item.author,
-            year: item.year,
-            started: item.started,
+            title,
+            author: content.match(AUTHOR_PATTERN)[1],
+            year: content.match(YEAR_PATTERN)[1],
+            started: content.match(STARTED_PATTERN)[1],
           });
         } else {
           setBook(null);
         }
       })
       .catch(() => setBook(null));
-  }, [parser]);
+  }, [AUTHOR_PATTERN, STARTED_PATTERN, YEAR_PATTERN]);
 
   if (book === undefined) {
     return <>Fetching...</>;

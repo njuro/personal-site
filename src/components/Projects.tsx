@@ -26,11 +26,18 @@ function Projects() {
       <Divider />
       <Card.Group centered>
         <ProjectCard
-          name="Baltík"
+          name="Baltík 3"
           image="baltik.gif"
           active="2003 - 2006"
           languages={["Baltik"]}
           summary="The sweet beginnings"
+        />
+        <ProjectCard
+          name="Svet Minimojov / PokéSvet"
+          image="minimoj.jpg"
+          active="2007-2008"
+          languages={["HTML", "CSS"]}
+          summary="Basic static websites"
         />
       </Card.Group>
     </div>
