@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import moment from "moment";
+import { Segment } from "semantic-ui-react";
 
 interface Book {
   title: string;
@@ -36,24 +37,28 @@ function Goodreads() {
   }, [AUTHOR_PATTERN, STARTED_PATTERN, YEAR_PATTERN]);
 
   if (book === undefined) {
-    return <>Fetching...</>;
+    return (
+      <Segment padded raised style={{ fontSize: "16px" }}>
+        Fetching...
+      </Segment>
+    );
   }
 
   if (book === null) {
     return (
-      <>
+      <Segment padded raised style={{ fontSize: "16px" }}>
         It is shocking, but I am not reading any book at the moment (or maybe I
         just forgot to update it in my GoodReads profile).
-      </>
+      </Segment>
     );
   }
 
   return (
-    <>
+    <Segment padded raised style={{ fontSize: "16px" }}>
       The book I am currently reading is <strong>{book.title}</strong> from{" "}
       <strong>{book.author}</strong> ({book.year}). I started reading it{" "}
-      <strong>{moment(book.started).fromNow()}</strong>).
-    </>
+      <strong>{moment(book.started).fromNow()}</strong>.
+    </Segment>
   );
 }
 

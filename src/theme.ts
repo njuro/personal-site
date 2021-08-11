@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   
-  .ui.header, ui.segment {
+  .ui.header, .ui.segment {
     background-color: ${primaryColor} !important;
     color: ${secondaryColor} !important;
   }

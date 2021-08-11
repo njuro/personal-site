@@ -2,9 +2,10 @@ import React from "react";
 import { Header, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import useNavigation from "../useNavigation";
-import { ABOUT_URL, CONTACT_URL } from "../mappings";
+import { ABOUT_URL, CONTACT_URL, PROJECTS_URL } from "../mappings";
 import Tooltip from "./Tooltip";
 import Goodreads from "./Goodreads";
+import Github from "./Github";
 
 function About() {
   useNavigation(ABOUT_URL);
@@ -72,21 +73,54 @@ function About() {
       </p>
       <p>
         I also made an effort to document my hobby/side projects on this
-        website, with some of them having a code publicly available, so check it
-        out.
+        website, with some of them having a code publicly available, so{" "}
+        <Link to={PROJECTS_URL} className="content-link">
+          check it out
+        </Link>
+        .
       </p>
       <Header as="h2">What are you currently working on?</Header>
       <p>
-        My current company is <strong>CleverFarm</strong>. As for side projects,
-        this information changes so often, that the best I can do is to provide
-        you with information about the public last commit on my GitHub.
+        My current company is{" "}
+        <strong>
+          <a
+            href="https://cleverfarm.ag"
+            target="_blank"
+            rel="noreferrer"
+            className="content-link"
+          >
+            CleverFarm
+          </a>
+        </strong>
+        . As for side projects, this information changes so often, that the best
+        I can do is to provide you with information about the public last commit
+        on my{" "}
+        <a
+          href="https://github.com/njuro"
+          target="_blank"
+          className="content-link"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        .
       </p>
       <p>
-        My last public commit was to [name] repository on [date] with message
-        [message].
+        <Github />
       </p>
       <Header as="h2">What are you currently reading?</Header>
-      <p>Fetching the latest data from GoodReads just for you!</p>
+      <p>
+        Fetching the latest data from{" "}
+        <a
+          href="https://www.goodreads.com/user/show/80333251-njuro"
+          target="_blank"
+          className="content-link"
+          rel="noreferrer"
+        >
+          GoodReads
+        </a>{" "}
+        just for you!
+      </p>
       <p>
         <Goodreads />
       </p>
