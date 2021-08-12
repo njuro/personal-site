@@ -28,18 +28,24 @@ function MenuItem({ path, children, ...rest }: MenuItemProps) {
 
 const MenuContainer = styled(Menu)`
   @media only screen and (min-width: 1000px) {
-    float: right !important;
-  }
-
-  & > .item {
-    margin-left: 16px !important;
-    margin-right: 16px !important;
+    & > .item {
+      margin-left: 16px !important;
+      margin-right: 16px !important;
+    }
   }
 `;
 function TopMenu() {
   return (
-    <Segment vertical style={{ marginTop: "20px", marginBottom: "20px" }}>
-      <header style={{ display: "inline-block", paddingTop: "14px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexFlow: "row wrap",
+        justifyContent: "space-between",
+        marginTop: "20px",
+        marginBottom: "20px",
+      }}
+    >
+      <header style={{ paddingTop: "14px" }}>
         <Link to={HOME_URL} className="header-link">
           <Header as="h1">
             Juraj Noge
@@ -61,7 +67,7 @@ function TopMenu() {
           Contact
         </MenuItem>
       </MenuContainer>
-    </Segment>
+    </div>
   );
 }
 

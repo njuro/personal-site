@@ -21,7 +21,7 @@ function Projects() {
       <p style={{ fontSize: "14px", color: "grey" }}>
         [1] Also a story on how and why I started it, which probably is of a
         little interest for anyone but me, but it was a nice trip down the
-        memory line writing it.
+        memory lane writing it.
       </p>
       <Divider />
       <Card.Group centered>
