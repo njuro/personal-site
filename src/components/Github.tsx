@@ -19,7 +19,9 @@ function Github() {
     })
       .then((res) => res.json())
       .then((events) => {
-        const push = events.find((event: any) => event.type === "PushEvent");
+        const push = events.find(
+          (event: Record<string, unknown>) => event.type === "PushEvent"
+        );
         if (push) {
           setCommit({
             repository: push.repo.name,

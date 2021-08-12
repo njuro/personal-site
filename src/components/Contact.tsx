@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, List, SemanticICONS } from "semantic-ui-react";
+import { List, SemanticICONS } from "semantic-ui-react";
 import { Helmet } from "react-helmet";
 import useNavigation from "../useNavigation";
 import {

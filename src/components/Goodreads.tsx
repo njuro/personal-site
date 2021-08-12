@@ -57,7 +57,7 @@ function Goodreads() {
     <Segment padded raised style={{ fontSize: "16px" }}>
       The book I am currently reading is <strong>{book.title}</strong> from{" "}
       <strong>{book.author}</strong> ({book.year}). I started reading it{" "}
-      <strong>{moment(book.started).fromNow()}</strong>.
+      <strong>{moment(book.started, "YYYY/MM/DD").fromNow()}</strong>.
     </Segment>
   );
 }

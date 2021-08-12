@@ -114,9 +114,7 @@ function About() {
         </a>
         .
       </p>
-      <p>
-        <Github />
-      </p>
+      <Github />
       <Header as="h2">What are you currently reading?</Header>
       <p>
         Fetching the latest data from{" "}
@@ -130,9 +128,7 @@ function About() {
         </a>{" "}
         just for you!
       </p>
-      <p>
-        <Goodreads />
-      </p>
+      <Goodreads />
       <Header as="h2">What is your current favorite...?</Header>
       <Header as="h4">
         <Icon name="question circle" color="grey" />
@@ -215,30 +211,31 @@ function About() {
         have yet to recover the attention span I had as an early teenager),
         going to the pub with friends, or attending a rave/rap concert/festival.
         <br />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-          }}
-        >
-          <Image
-            rounded
-            size="medium"
-            src="/images/beach-volleyball.jpg"
-            style={{ marginTop: "20px" }}
-            alt="Me playing beach volleyball"
-          />
-          <Image
-            rounded
-            size="medium"
-            src="/images/books.jpg"
-            style={{ marginTop: "20px" }}
-            alt="Some of my favorite books"
-          />
-        </div>
       </p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+        }}
+      >
+        <Image
+          rounded
+          size="medium"
+          src="/images/beach-volleyball.jpg"
+          style={{ marginTop: "20px" }}
+          alt="Me playing beach volleyball"
+        />
+        <Image
+          rounded
+          size="medium"
+          src="/images/books.jpg"
+          style={{ marginTop: "20px" }}
+          alt="Some of my favorite books"
+        />
+      </div>
+
       <Header as="h2">How can I reach you?</Header>
       <p>
         See{" "}

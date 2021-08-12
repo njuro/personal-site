@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Header, Menu, MenuItemProps, Segment } from "semantic-ui-react";
+import { Header, Menu, MenuItemProps } from "semantic-ui-react";
 import styled from "styled-components";
 import { useHistory, Link } from "react-router-dom";
 import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";

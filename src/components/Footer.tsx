@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Divider,
-  Icon,
-  Segment,
-  SegmentProps,
-  SemanticICONS,
-} from "semantic-ui-react";
+import { Icon, Segment, SegmentProps, SemanticICONS } from "semantic-ui-react";
 import styled from "styled-components";
 import {
   EMAIL_ADDRESS,
