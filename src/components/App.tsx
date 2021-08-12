@@ -40,7 +40,12 @@ function App() {
             <main>
               <Container
                 text
-                style={{ display: "block", padding: "30px", minWidth: "80%" }}
+                style={{
+                  display: "block",
+                  paddingTop: "30px",
+                  paddingLeft: "30px",
+                  minWidth: "80%",
+                }}
               >
                 <NavigationSwitch />
               </Container>
