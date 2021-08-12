@@ -228,12 +228,14 @@ function About() {
             size="medium"
             src="/images/beach-volleyball.jpg"
             style={{ marginTop: "20px" }}
+            alt="Me playing beach volleyball"
           />
           <Image
             rounded
             size="medium"
             src="/images/books.jpg"
             style={{ marginTop: "20px" }}
+            alt="Some of my favorite books"
           />
         </div>
       </p>

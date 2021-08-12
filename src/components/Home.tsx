@@ -19,6 +19,7 @@ function Home() {
           marginRight: "auto",
           marginBottom: "10px",
         }}
+        alt="Profile picture"
       />
       <p>
         Hello! My name is <strong>Juraj Noge </strong>
