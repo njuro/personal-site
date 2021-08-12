@@ -30,11 +30,18 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   a.header-link {
-    :hover,
-    :active {
+    color: ${secondaryColor} !important;
+    
+    &:hover,
+    &:active {
       h1 {
         color: lightgray !important;
       }
+      color: lightgray !important;
+    }
+    
+    span {
+      color: gray !important;
     }
   }
   
@@ -69,6 +76,21 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     border-bottom: none !important;
+  }
+  
+  .ui.list {
+    
+    .item {
+      border-top-color: gray !important;
+    }
+    
+    .header {
+      color: ${secondaryColor} !important;
+    }
+    
+    .description {
+      color: gray !important;
+    }
   }
 `;
 

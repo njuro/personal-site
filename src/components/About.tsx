@@ -2,7 +2,14 @@ import React from "react";
 import { Header, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import useNavigation from "../useNavigation";
-import { ABOUT_URL, CONTACT_URL, PROJECTS_URL } from "../mappings";
+import {
+  ABOUT_URL,
+  CONTACT_URL,
+  GITHUB_URL,
+  GOODREADS_URL,
+  LINKEDIN_URL,
+  PROJECTS_URL,
+} from "../mappings";
 import Tooltip from "./Tooltip";
 import Goodreads from "./Goodreads";
 import Github from "./Github";
@@ -62,7 +69,7 @@ function About() {
         respecting the <Tooltip content="Don't Repeat Yourself" trigger="DRY" />{" "}
         principle I will refer you to my{" "}
         <a
-          href="https://www.linkedin.com/in/juraj-noge#oc-background-section"
+          href={`${LINKEDIN_URL}#oc-background-section`}
           className="content-link"
           target="_blank"
           rel="noreferrer"
@@ -96,7 +103,7 @@ function About() {
         I can do is to provide you with information about the public last commit
         on my{" "}
         <a
-          href="https://github.com/njuro"
+          href={GITHUB_URL}
           target="_blank"
           className="content-link"
           rel="noreferrer"
@@ -112,7 +119,7 @@ function About() {
       <p>
         Fetching the latest data from{" "}
         <a
-          href="https://www.goodreads.com/user/show/80333251-njuro"
+          href={GOODREADS_URL}
           target="_blank"
           className="content-link"
           rel="noreferrer"
@@ -232,7 +239,7 @@ function About() {
       <p>
         See{" "}
         <Link to={CONTACT_URL} className="content-link">
-          Contacts
+          Contact
         </Link>
         .
       </p>

@@ -36,11 +36,11 @@ function Home() {
         challenge.
       </p>
       <p>
-        So read my{" "}
+        So read{" "}
         <Link to={ABOUT_URL} className="content-link">
-          Bio
-        </Link>
-        , check out my{" "}
+          About
+        </Link>{" "}
+        me, check out my{" "}
         <Link to={PROJECTS_URL} className="content-link">
           Projects
         </Link>{" "}
