@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { Helmet } from "react-helmet";
 import { ThemeProvider } from "styled-components/macro";
 import styled from "styled-components";
 import { Container } from "semantic-ui-react";
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <Wrapper>
+      <Helmet titleTemplate="%s - Juraj Noge" defaultTitle="Juraj Noge" />
       <NavigationContext.Provider value={{ activePath, setActivePath }}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />

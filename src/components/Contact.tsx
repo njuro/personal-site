@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon, List, SemanticICONS } from "semantic-ui-react";
+import { Helmet } from "react-helmet";
 import useNavigation from "../useNavigation";
 import {
   CONTACT_URL,
@@ -95,6 +96,7 @@ function Contact() {
   ];
   return (
     <div style={{ fontSize: "18px" }}>
+      <Helmet title="Contact" />
       <List divided relaxed>
         {contacts.map((contact) => (
           <ExternalContact

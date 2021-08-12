@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import useNavigation from "../useNavigation";
 import {
   ABOUT_URL,
@@ -18,6 +19,7 @@ function About() {
   useNavigation(ABOUT_URL);
   return (
     <div>
+      <Helmet title="About" />
       <Header as="h2">Who the hell are you?</Header>
       <p>
         A 23 years old guy who likes to order computers to do things, which make
