@@ -58,6 +58,7 @@ function ProjectCard({
             wrapped
             ui={false}
             src={`/images/projects/${image}`}
+            alt={name}
           />
         }
       >
@@ -65,7 +66,12 @@ function ProjectCard({
           {name} ({active})
         </Modal.Header>
         <Modal.Content image>
-          <Image wrapped size="massive" src={`/images/projects/${image}`} />
+          <Image
+            wrapped
+            size="massive"
+            src={`/images/projects/${image}`}
+            alt={name}
+          />
         </Modal.Content>
       </Modal>
       <Card.Content>
