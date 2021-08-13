@@ -59,7 +59,15 @@ export const GlobalStyle = createGlobalStyle`
     color: ${secondaryColor} !important;
   }
   
-  .sub.header {
+  .ui.card {
+    background-color: lightgray !important;
+    
+    .header, .description {
+      color: ${primaryColor} !important;
+    }
+  }
+  
+  .sub.header, .meta {
     color: gray !important
   }
   

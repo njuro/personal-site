@@ -1,15 +1,39 @@
 import React from "react";
-import { Card, Image } from "semantic-ui-react";
+import { Card, Image, Label, SemanticCOLORS } from "semantic-ui-react";
 
+const colorMapping: Record<ProgrammingLanguage, SemanticCOLORS> = {
+  Java: "red",
+  Kotlin: "blue",
+  JavaScript: "teal",
+  TypeScript: "teal",
+  Python: "green",
+  HTML: "orange",
+  CSS: "violet",
+  PHP: "brown",
+  Baltik: "yellow",
+};
+export enum ProgrammingLanguage {
+  Java = "Java",
+  Kotlin = "Kotlin",
+  TypeScript = "TypeScript",
+  JavaScript = "JavaScript",
+  Python = "Python",
+  PHP = "PHP",
+  HTML = "HTML",
+  CSS = "CSS",
+  Baltik = "Baltik",
+}
 interface ProjectProps {
   name: string;
+  featured?: boolean;
   image: string;
   active: string;
-  languages: string[];
+  languages: ProgrammingLanguage[];
   summary: string;
 }
 function ProjectCard({
   name,
+  featured,
   image,
   active,
   languages,
@@ -17,13 +41,51 @@ function ProjectCard({
 }: ProjectProps) {
   return (
     <Card>
-      <Image wrapped ui={false} src={`/images/projects/${image}`} />
+      <Image
+        label={
+          featured
+            ? { as: "a", corner: "left", icon: "star", color: "yellow" }
+            : undefined
+        }
+        wrapped
+        ui={false}
+        src={`/images/projects/${image}`}
+      />
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Meta>{active}</Card.Meta>
         <Card.Description>{summary}</Card.Description>
       </Card.Content>
-      <Card.Content extra>{languages.join(", ")} See Details</Card.Content>
+      <Card.Content extra>
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "row nowrap",
+            justifyContent: "space-around",
+          }}
+        >
+          {languages.map((language) => (
+            <Label
+              horizontal
+              size="large"
+              key={language}
+              color={colorMapping[language]}
+            >
+              {language}
+            </Label>
+          ))}
+        </div>
+      </Card.Content>
+      <Card.Content
+        extra
+        style={{
+          textAlign: "center",
+          color: "gray",
+          fontWeight: "bold",
+        }}
+      >
+        See details
+      </Card.Content>
     </Card>
   );
 }

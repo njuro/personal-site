@@ -42,8 +42,7 @@ function App() {
                 text
                 style={{
                   display: "block",
-                  paddingTop: "30px",
-                  paddingLeft: "30px",
+                  padding: "30px 5px 30px",
                   minWidth: "80%",
                 }}
               >
