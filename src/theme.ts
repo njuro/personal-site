@@ -60,7 +60,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   .ui.card {
-    background-color: lightgray !important;
+    background-color: whitesmoke !important;
     
     .header, .description {
       color: ${primaryColor} !important;
