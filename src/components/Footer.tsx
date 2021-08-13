@@ -1,5 +1,11 @@
 import React from "react";
-import { Icon, Segment, SegmentProps, SemanticICONS } from "semantic-ui-react";
+import {
+  Icon,
+  Popup,
+  Segment,
+  SegmentProps,
+  SemanticICONS,
+} from "semantic-ui-react";
 import styled from "styled-components";
 import {
   EMAIL_ADDRESS,
@@ -14,11 +20,19 @@ interface ContactIconProps {
 }
 function ContactIcon({ name, url }: ContactIconProps) {
   return (
-    <Icon
-      name={name}
-      link
-      size="large"
-      onClick={() => window.open(url, "_blank", "noreferrer")}
+    <Popup
+      position="top center"
+      size="small"
+      inverted
+      content={name}
+      trigger={
+        <Icon
+          name={name}
+          link
+          size="large"
+          onClick={() => window.open(url, "_blank", "noreferrer")}
+        />
+      }
     />
   );
 }
