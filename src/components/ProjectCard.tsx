@@ -1,5 +1,5 @@
-import React from "react";
-import { Card, Image, Label, SemanticCOLORS } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Card, Image, Label, Modal, SemanticCOLORS } from "semantic-ui-react";
 
 const colorMapping: Record<ProgrammingLanguage, SemanticCOLORS> = {
   Java: "red",
@@ -39,18 +39,35 @@ function ProjectCard({
   languages,
   summary,
 }: ProjectProps) {
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <Card>
-      <Image
-        label={
-          featured
-            ? { as: "a", corner: "left", icon: "star", color: "yellow" }
-            : undefined
+      <Modal
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        open={open}
+        trigger={
+          <Image
+            label={
+              featured
+                ? { as: "a", corner: "left", icon: "star", color: "yellow" }
+                : undefined
+            }
+            style={{ cursor: "pointer" }}
+            wrapped
+            ui={false}
+            src={`/images/projects/${image}`}
+          />
         }
-        wrapped
-        ui={false}
-        src={`/images/projects/${image}`}
-      />
+      >
+        <Modal.Header>
+          {name} ({active})
+        </Modal.Header>
+        <Modal.Content image>
+          <Image wrapped size="massive" src={`/images/projects/${image}`} />
+        </Modal.Content>
+      </Modal>
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Meta>{active}</Card.Meta>
@@ -84,7 +101,7 @@ function ProjectCard({
           fontWeight: "bold",
         }}
       >
-        See details
+        <a href="https://google.com">See details & story</a>
       </Card.Content>
     </Card>
   );

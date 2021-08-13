@@ -65,6 +65,15 @@ export const GlobalStyle = createGlobalStyle`
     .header, .description {
       color: ${primaryColor} !important;
     }
+    
+    .extra {
+      a {
+        color: gray !important;
+        &:hover {
+          color: ${primaryColor} !important;
+        }
+      }
+    }
   }
   
   .sub.header, .meta {
