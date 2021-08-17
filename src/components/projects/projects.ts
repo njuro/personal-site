@@ -21,6 +21,7 @@ export interface Project {
   languages: ProgrammingLanguage[];
   image: string;
   lessons: string;
+  repository?: string;
 }
 
 export const PROJECTS: Record<ProjectId, Project> = {
@@ -38,6 +39,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     image: "jard.png",
     lessons:
       "Too many to be listed here. Management of software project during the whole lifecycle, from initial development, through several major refactors, to building CI/CD pipelines and releasing.",
+    repository: "https://github.com/njuro/jard",
   },
   [ProjectId.PersonalSite]: {
     name: "Personal site",
@@ -92,6 +94,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     image: "updatrrr.png",
     lessons:
       "How to build a simple desktop application (CLI + GUI), how to parse HTML.",
+    repository: "https://github.com/njuro/updatrrr",
   },
   [ProjectId.ChatBot]: {
     name: "IRC Bot / MGC Chat Bot",

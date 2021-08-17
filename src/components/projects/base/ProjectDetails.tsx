@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { Divider, Header, Icon, Image } from "semantic-ui-react";
+import { Divider, Header, Icon, Image, Label, Popup } from "semantic-ui-react";
 import { Project } from "../projects";
 import { PROJECTS_IMAGES_PATH, PROJECTS_URL } from "../../../mappings";
 import { ProgrammingLanguageLabel } from "./ProgrammingLanguage";
@@ -15,8 +15,29 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
     <div>
       <Helmet title={project.name} />
       <Header as="h1">
-        {project.name}
-        <Header.Subheader>{project.active}</Header.Subheader>
+        {project.repository && (
+          <Popup
+            inverted
+            position="top center"
+            content="View source code"
+            trigger={
+              <Icon
+                style={{
+                  opacity: ".45",
+                }}
+                name="github"
+                link
+                onClick={() =>
+                  window.open(project.repository, "_blank", "noreferrer")
+                }
+              />
+            }
+          />
+        )}
+        <Header.Content>
+          {project.name}
+          <Header.Subheader>{project.active}</Header.Subheader>
+        </Header.Content>
       </Header>
       <div
         style={{
@@ -25,6 +46,12 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
           justifyContent: "flex-start",
         }}
       >
+        {project.featured && (
+          <Label horizontal size="large" color="yellow">
+            <Icon name="star" />
+            Featured
+          </Label>
+        )}
         {project.languages.map((language) => (
           <ProgrammingLanguageLabel language={language} key={language} />
         ))}
