@@ -187,6 +187,14 @@ function About() {
         I loved watching Breaking Bad, Mr. Robot, or House of Cards. Right now I
         am excited for the final season of La Casa De Papel.
       </p>
+      <Header as="h4">
+        <Icon name="question circle" color="grey" />
+        Conspiracy theory?
+      </Header>
+      <p>
+        All pigeons are secretly government-issued spy drones and the pandemic
+        happened so they could change the batteries without us noticing.
+      </p>
       <Header as="h2">
         Do you have a life besides sitting in front of a computer?
       </Header>
