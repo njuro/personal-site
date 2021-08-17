@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, Image, Modal } from "semantic-ui-react";
+import styled from "styled-components";
 import { Project, ProjectId } from "../projects";
 import { ProgrammingLanguageLabel } from "./ProgrammingLanguage";
 import { PROJECT_URL, PROJECTS_IMAGES_PATH } from "../../../mappings";
+import { primaryColor } from "../../../theme";
 
+const ProjectLink = styled(Link)`
+  color: ${primaryColor} !important;
+
+  &:hover,
+  &:active {
+    color: black !important;
+  }
+`;
 interface ProjectOverviewProps {
   id: ProjectId;
   project: Project;
@@ -34,7 +44,9 @@ function ProjectOverview({ id, project }: ProjectOverviewProps) {
         }
       >
         <Modal.Header>
-          {project.name} ({project.active})
+          <ProjectLink to={PROJECT_URL(id)}>
+            {project.name} ({project.active})
+          </ProjectLink>
         </Modal.Header>
         <Modal.Content image>
           <Image
@@ -46,7 +58,9 @@ function ProjectOverview({ id, project }: ProjectOverviewProps) {
         </Modal.Content>
       </Modal>
       <Card.Content>
-        <Card.Header>{project.name}</Card.Header>
+        <Card.Header>
+          <ProjectLink to={PROJECT_URL(id)}>{project.name}</ProjectLink>
+        </Card.Header>
         <Card.Meta>{project.active}</Card.Meta>
         <Card.Description>{project.summary}</Card.Description>
       </Card.Content>

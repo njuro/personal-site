@@ -40,10 +40,14 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
       </div>
       <Image
         bordered
+        alt={project.name}
         size="massive"
         centered
         src={`${PROJECTS_IMAGES_PATH}/${project.image}`}
-        style={{ marginBottom: "20px", borderColor: "grey" }}
+        style={{ marginBottom: "20px", borderColor: "grey", cursor: "pointer" }}
+        onClick={() =>
+          window.open(`${PROJECTS_IMAGES_PATH}/${project.image}`, "_blank")
+        }
       />
       <div style={{ textAlign: "right", fontSize: "16px" }}>
         <em>
