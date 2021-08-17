@@ -10,6 +10,7 @@ import {
   GOODREADS_URL,
   LINKEDIN_URL,
   PROJECTS_URL,
+  RESUME_URL,
 } from "../mappings";
 import Tooltip from "./Tooltip";
 import Goodreads from "./Goodreads";
@@ -63,7 +64,16 @@ function About() {
       <p>
         I am also familiar with the various tools software developers use in
         their everyday lives, such as <em>git, Docker, CI/CD pipelines</em> and
-        so on - check out my CV for more details.
+        so on - check out my{" "}
+        <a
+          href={RESUME_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="content-link"
+        >
+          Resume
+        </a>{" "}
+        for more details.
       </p>
       <Header as="h2">Do you have something to prove it?</Header>
       <p>

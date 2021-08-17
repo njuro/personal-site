@@ -12,13 +12,15 @@ import {
   GITHUB_URL,
   GOODREADS_URL,
   LINKEDIN_URL,
+  RESUME_URL,
 } from "../mappings";
 
 interface ContactIconProps {
-  name: SemanticICONS;
+  icon: SemanticICONS;
+  name: string;
   url: string;
 }
-function ContactIcon({ name, url }: ContactIconProps) {
+function ContactIcon({ icon, name, url }: ContactIconProps) {
   return (
     <Popup
       position="top center"
@@ -27,7 +29,7 @@ function ContactIcon({ name, url }: ContactIconProps) {
       content={name}
       trigger={
         <Icon
-          name={name}
+          name={icon}
           link
           size="large"
           onClick={() => window.open(url, "_blank", "noreferrer")}
@@ -58,20 +60,29 @@ const FooterContainer: React.FC<SegmentProps> = styled(Segment)`
 function Footer() {
   const contacts: ContactIconProps[] = [
     {
-      name: "github",
+      icon: "github",
+      name: "GitHub",
       url: GITHUB_URL,
     },
     {
-      name: "linkedin",
+      icon: "linkedin",
+      name: "LinkedIn",
       url: LINKEDIN_URL,
     },
     {
-      name: "goodreads",
+      icon: "goodreads",
+      name: "GoodReads",
       url: GOODREADS_URL,
     },
     {
-      name: "mail",
+      icon: "mail",
+      name: "E-mail",
       url: `mailto:${EMAIL_ADDRESS}`,
+    },
+    {
+      icon: "briefcase",
+      name: "Resume",
+      url: RESUME_URL,
     },
   ];
 
@@ -96,9 +107,10 @@ function Footer() {
         <br />
         {contacts.map((contact) => (
           <ContactIcon
+            icon={contact.icon}
             name={contact.name}
             url={contact.url}
-            key={contact.name}
+            key={contact.icon}
           />
         ))}
       </FooterContainer>

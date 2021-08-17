@@ -8,6 +8,7 @@ import {
   GITHUB_URL,
   GOODREADS_URL,
   LINKEDIN_URL,
+  RESUME_URL,
   WEB_URL,
 } from "../mappings";
 
@@ -92,6 +93,12 @@ function Contact() {
       username: "[request via other channels]",
       url: "/#",
       icon: "phone",
+    },
+    {
+      name: "Resume",
+      username: "[download my resume]",
+      url: RESUME_URL,
+      icon: "briefcase",
     },
   ];
   return (

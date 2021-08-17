@@ -14,3 +14,4 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/juraj-noge";
 export const GOODREADS_URL =
   "https://www.goodreads.com/user/show/80333251-njuro";
 export const EMAIL_ADDRESS = "juraj@noge.dev";
+export const RESUME_URL = "/juraj-noge-resume.pdf";

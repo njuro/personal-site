@@ -19,7 +19,7 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
           <Popup
             inverted
             position="top center"
-            content="View source code"
+            content="Browse the source code"
             trigger={
               <Icon
                 style={{
@@ -39,19 +39,25 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
           <Header.Subheader>{project.active}</Header.Subheader>
         </Header.Content>
       </Header>
+      {project.featured && (
+        <Label
+          horizontal
+          size="large"
+          color="yellow"
+          style={{ marginBottom: "10px" }}
+        >
+          <Icon name="star" />
+          Featured
+        </Label>
+      )}
       <div
         style={{
+          marginBottom: "10px",
           display: "flex",
           flexFlow: "row nowrap",
           justifyContent: "flex-start",
         }}
       >
-        {project.featured && (
-          <Label horizontal size="large" color="yellow">
-            <Icon name="star" />
-            Featured
-          </Label>
-        )}
         {project.languages.map((language) => (
           <ProgrammingLanguageLabel language={language} key={language} />
         ))}
