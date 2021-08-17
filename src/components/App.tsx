@@ -8,6 +8,7 @@ import TopMenu from "./TopMenu";
 import { GlobalStyle, theme } from "../theme";
 import Footer from "./Footer";
 import NavigationSwitch from "./NavigationSwitch";
+import ScrollToTop from "./ScrollToTop";
 
 interface NavigationContextProps {
   activePath?: string;
@@ -38,6 +39,7 @@ function App() {
               <TopMenu />
             </nav>
             <main>
+              <ScrollToTop />
               <Container
                 text
                 style={{

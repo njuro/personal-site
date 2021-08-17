@@ -14,6 +14,16 @@ import {
 } from "../mappings";
 import { ProjectId } from "./projects/projects";
 import Baltik from "./projects/Baltik";
+import Minimoj from "./projects/Minimoj";
+import Okamih from "./projects/Okamih";
+import Jard from "./projects/Jard";
+import PersonalSite from "./projects/PersonalSite";
+import AdventOfCode from "./projects/AdventOfCode";
+import MedicQuiz from "./projects/MedicQuiz";
+import MarriageStats from "./projects/MarriageStats";
+import UpdatRRR from "./projects/UpdatRRR";
+import Minecraft from "./projects/Minecraft";
+import ChatBot from "./projects/ChatBot";
 
 function NavigationSwitch() {
   return (
@@ -22,6 +32,40 @@ function NavigationSwitch() {
       <Route exact path={ABOUT_URL} component={About} />
       <Route exact path={PROJECTS_URL} component={Projects} />
       <Route exact path={PROJECT_URL(ProjectId.Baltik)} component={Baltik} />
+      <Route exact path={PROJECT_URL(ProjectId.Minimoj)} component={Minimoj} />
+      <Route exact path={PROJECT_URL(ProjectId.Okamih)} component={Okamih} />
+      <Route
+        exact
+        path={PROJECT_URL(ProjectId.Minecraft)}
+        component={Minecraft}
+      />
+      <Route
+        exact
+        path={PROJECT_URL(ProjectId.UpdatRRR)}
+        component={UpdatRRR}
+      />
+      <Route exact path={PROJECT_URL(ProjectId.ChatBot)} component={ChatBot} />
+      <Route
+        exact
+        path={PROJECT_URL(ProjectId.MarriageStats)}
+        component={MarriageStats}
+      />
+      <Route
+        exact
+        path={PROJECT_URL(ProjectId.MedicQuiz)}
+        component={MedicQuiz}
+      />
+      <Route
+        exact
+        path={PROJECT_URL(ProjectId.AdventOfCode)}
+        component={AdventOfCode}
+      />
+      <Route
+        exact
+        path={PROJECT_URL(ProjectId.PersonalSite)}
+        component={PersonalSite}
+      />
+      <Route exact path={PROJECT_URL(ProjectId.Jard)} component={Jard} />
       <Route exact path={CONTACT_URL} component={Contact} />
       <Route component={NotFound} />
     </Switch>

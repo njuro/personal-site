@@ -1,7 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Header } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import { Divider, Header, Icon, Image } from "semantic-ui-react";
 import { Project } from "../projects";
+import { PROJECTS_IMAGES_PATH, PROJECTS_URL } from "../../../mappings";
+import { ProgrammingLanguageLabel } from "./ProgrammingLanguage";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -11,9 +14,46 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
   return (
     <div>
       <Helmet title={project.name} />
-      <Header as="h1">{project.name}</Header>
-      <Header.Subheader>{project.active}</Header.Subheader>
-      {children}
+      <Header as="h1">
+        {project.name}
+        <Header.Subheader>{project.active}</Header.Subheader>
+      </Header>
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row nowrap",
+          justifyContent: "flex-start",
+        }}
+      >
+        {project.languages.map((language) => (
+          <ProgrammingLanguageLabel language={language} key={language} />
+        ))}
+      </div>
+      <div
+        style={{ marginTop: "20px", marginBottom: "20px", fontSize: "16px" }}
+      >
+        {children}
+        <Divider />
+        <p>
+          <strong>Lessons learned: {project.lessons}</strong>
+        </p>
+      </div>
+      <Image
+        bordered
+        size="massive"
+        centered
+        src={`${PROJECTS_IMAGES_PATH}/${project.image}`}
+        style={{ marginBottom: "20px", borderColor: "grey" }}
+      />
+      <div style={{ textAlign: "right", fontSize: "16px" }}>
+        <em>
+          Back to{" "}
+          <Link to={PROJECTS_URL} className="content-link">
+            Projects
+          </Link>
+        </em>{" "}
+        <Icon name="arrow right" color="grey" />
+      </div>
     </div>
   );
 }

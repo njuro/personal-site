@@ -20,6 +20,7 @@ export interface Project {
   summary: string;
   languages: ProgrammingLanguage[];
   image: string;
+  lessons: string;
 }
 
 export const PROJECTS: Record<ProjectId, Project> = {
@@ -35,6 +36,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
       ProgrammingLanguage.TypeScript,
     ],
     image: "jard.png",
+    lessons:
+      "Too many to be listed here. Management of software project during the whole lifecycle, from initial development, through several major refactors, to building CI/CD pipelines and releasing.",
   },
   [ProjectId.PersonalSite]: {
     name: "Personal site",
@@ -46,6 +49,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
       ProgrammingLanguage.CSS,
     ],
     image: "personal-site.png",
+    lessons:
+      "How to showcase a portfolio and design a modern, responsive webpage.",
   },
   [ProjectId.MedicQuiz]: {
     name: "Medic Quiz",
@@ -57,6 +62,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
       ProgrammingLanguage.CSS,
     ],
     image: "medic-quiz.png",
+    lessons:
+      "How to digitize documents and parse them into meaningful structures.",
   },
   [ProjectId.AdventOfCode]: {
     name: "Advent of Code",
@@ -64,6 +71,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "Annual coding event I participate in",
     languages: [ProgrammingLanguage.Kotlin, ProgrammingLanguage.Python],
     image: "advent-of-code.png",
+    lessons:
+      "Increased knowledge of common algorithms, data structures and Python/Kotlin standard libraries.",
   },
   [ProjectId.MarriageStats]: {
     name: "Marriage Stats",
@@ -71,6 +80,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "Extracting and parsing of statistical data",
     languages: [ProgrammingLanguage.Python],
     image: "marriages.png",
+    lessons:
+      "How to parse Excel sheets and plot graphs with Python. Also how to make quick money on side with programming.",
   },
   [ProjectId.UpdatRRR]: {
     name: "UpdatRRR",
@@ -79,6 +90,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
       "Desktop application for automatic update of custom stylesheets (CLI + GUI)",
     languages: [ProgrammingLanguage.Java],
     image: "updatrrr.png",
+    lessons:
+      "How to build a simple desktop application (CLI + GUI), how to parse HTML.",
   },
   [ProjectId.ChatBot]: {
     name: "IRC Bot / MGC Chat Bot",
@@ -86,6 +99,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "Chat bots for online communities I was part of",
     languages: [ProgrammingLanguage.Java, ProgrammingLanguage.Python],
     image: "ircbot.png",
+    lessons: "How to scrape websites and mimic browser requests.",
   },
   [ProjectId.Minecraft]: {
     name: "SuvaCraft / ToDo plugin",
@@ -93,6 +107,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "Management of own Minecraft portal + custom plugin",
     languages: [ProgrammingLanguage.Java],
     image: "mcplugin.png",
+    lessons:
+      "Set up Java project with Maven, integrate with 3rd party API (Spigot), running and managing a gaming server and community.",
   },
   [ProjectId.Okamih]: {
     name: "OH OkamiH",
@@ -104,6 +120,8 @@ export const PROJECTS: Record<ProjectId, Project> = {
       ProgrammingLanguage.JavaScript,
     ],
     image: "okamih.png",
+    lessons:
+      "How to build a dynamic web page with register/login system, simple CMS for publishing, editing and deleting articles, comment system, polls etc. Also, frameworks are actually really useful and can save you a ton of time.",
   },
   [ProjectId.Minimoj]: {
     name: "Svet Minimojov / PokéSvet",
@@ -111,6 +129,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "Simple static websites I made as a child",
     languages: [ProgrammingLanguage.HTML, ProgrammingLanguage.CSS],
     image: "minimoj.png",
+    lessons: "How to make basic static web pages and style them, DRY principle",
   },
   [ProjectId.Baltik]: {
     name: "Baltík 3",
@@ -118,5 +137,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "My first contact with world of programming",
     languages: [ProgrammingLanguage.Baltik],
     image: "baltik.gif",
+    lessons:
+      "It is actually quite fun to give commands to a computer and watch it executing them precisely and tirelessly.",
   },
 };
