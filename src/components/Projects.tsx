@@ -13,8 +13,8 @@ function Projects() {
       <Helmet title="Projects" />
       <p>
         Here is a collection of my hobby & side programming projects that formed
-        me as a programmer. Each project contains year(s) I was working on it,
-        technology I used and lessons learned{" "}
+        me as a programmer. Each project contains the year(s) I was working on
+        it, technology I used and lessons learned{" "}
         <sup>
           <em>[1]</em>
         </sup>
@@ -26,7 +26,7 @@ function Projects() {
         projects I haven&apos;t recalled much.
       </p>
       <p style={{ fontSize: "14px", color: "grey" }}>
-        [1] Also a story on how and why I started it, which probably is of a
+        [1] Also a story on how and why I started it, which probably is of
         little interest for anyone but me, but it was a nice trip down the
         memory lane writing it.
       </p>

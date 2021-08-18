@@ -23,14 +23,14 @@ function About() {
       <Helmet title="About" />
       <Header as="h2">Who the hell are you?</Header>
       <p>
-        A 23 years old guy who likes to order computers to do things, which make
-        life easier for me, or others. I was born & raised in{" "}
+        A 23 years old guy who likes to command computers, in order to make life
+        easier for him, or others. I was born & raised in{" "}
         <em>Bratislava, Slovakia</em> and currently reside in{" "}
         <em>Brno, Czech Republic</em>.
       </p>
       <p>
-        I’ve been attracted to computers almost all my life. My journey as a
-        programmer began before I even realized. Then, at age of 10, my dad
+        I&apos;ve been attracted to computers almost all my life. My journey as
+        a programmer began before I even realized it. Then, at age of 10, my dad
         brought me a book from his job about{" "}
         <Tooltip
           content="Yes, I know these aren't programming languages, shhh"
@@ -47,7 +47,7 @@ function About() {
         exposed to many more languages and concepts such as{" "}
         <em>
           Python, JavaScript/TypeScript (React), Bash, SQL, C, C++, C#, Haskell,
-          Prolog
+          Prolog,
         </em>{" "}
         etc. I do not believe there is <em>One Right Way&trade;</em> to do
         everything, so I am always happy to expand my horizons and build my{" "}
@@ -169,8 +169,8 @@ function About() {
         IDE?
       </Header>
       <p>
-        IntelliJ IDEA Ultimate - or anything from JetBrains, really. These guys
-        know their craft really well (no wonder they created the most amazing
+        IntelliJ IDEA Ultimate - or anything from JetBrains. These guys know
+        their craft really well (no wonder they created the most amazing
         programming language too!)
       </p>
       <Header as="h4">
@@ -195,7 +195,7 @@ function About() {
       </Header>
       <p>
         I loved watching Breaking Bad, Mr. Robot, or House of Cards. Right now I
-        am excited for the final season of La Casa De Papel.
+        am excited for the final season of La Casa De Papel
       </p>
       <Header as="h4">
         <Icon name="question circle" color="grey" />
@@ -214,18 +214,18 @@ function About() {
         focused and my productivity as a programmer is also significantly lower.
       </p>
       <p>
-        Therefore I lift weights 3-6 times a week. I love going to the gym,
+        Therefore I lift weights 3-6 times a week. I love going to the gym
         because it is very flexible - there is a gym in every city, I don’t have
         to rely on anyone and I can choose whatever time suits me best. My other
         lifelong sport is volleyball (both in the gyms and on the sand) - I used
         to play in the club when I was 10-17 and since then I play
-        semi-regularly with various groups. I think it is a great sport, because
+        semi-regularly with various groups. I think it is a great sport because
         it forces you to communicate, cooperate with your team and own your
         mistakes, which are all important soft skills even for a software
         engineer.
       </p>
       <p>
-        My other spare time activities include avid book reading (although I
+        My other spare-time activities include avid book reading (although I
         have yet to recover the attention span I had as an early teenager),
         going to the pub with friends, or attending a rave/rap concert/festival.
         <br />

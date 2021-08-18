@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Image } from "semantic-ui-react";
+import { Icon, Image, Popup } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import useNavigation from "../useNavigation";
 import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";
@@ -23,11 +23,18 @@ function Home() {
       />
       <p>
         Hello! My name is <strong>Juraj Noge </strong>
-        <Icon
-          name="volume up"
-          color="grey"
-          link
-          onClick={() => pronunciation.play()}
+        <Popup
+          content="Pronounce it!"
+          trigger={
+            <Icon
+              name="volume up"
+              color="grey"
+              link
+              onClick={() => pronunciation.play()}
+            />
+          }
+          position="top center"
+          inverted
         />
         and I am what they call a Software Engineer.
       </p>

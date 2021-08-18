@@ -10,7 +10,7 @@ const colorMapping: Record<ProgrammingLanguage, SemanticCOLORS> = {
   HTML: "orange",
   CSS: "violet",
   PHP: "brown",
-  Baltik: "yellow",
+  Baltie: "yellow",
 };
 
 export enum ProgrammingLanguage {
@@ -22,7 +22,7 @@ export enum ProgrammingLanguage {
   PHP = "PHP",
   HTML = "HTML",
   CSS = "CSS",
-  Baltik = "Baltik",
+  Baltie = "Baltie",
 }
 
 export function ProgrammingLanguageLabel({

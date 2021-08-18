@@ -11,7 +11,7 @@ export enum ProjectId {
   Minecraft = "minecraft",
   Okamih = "okamih",
   Minimoj = "minimoj",
-  Baltik = "baltik",
+  Baltie = "baltie",
 }
 export interface Project {
   featured?: boolean;
@@ -124,7 +124,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     ],
     image: "okamih.png",
     lessons:
-      "How to build a dynamic web page with register/login system, simple CMS for publishing, editing and deleting articles, comment system, polls etc. Also, frameworks are actually really useful and can save you a ton of time.",
+      "How to build a dynamic web page with a register/login system, simple CMS for publishing, editing and deleting articles, comment system, polls, etc. Also, frameworks are actually really useful and can save you a ton of time.",
   },
   [ProjectId.Minimoj]: {
     name: "Svet Minimojov / PokéSvet",
@@ -132,13 +132,14 @@ export const PROJECTS: Record<ProjectId, Project> = {
     summary: "Simple static websites I made as a child",
     languages: [ProgrammingLanguage.HTML, ProgrammingLanguage.CSS],
     image: "minimoj.png",
-    lessons: "How to make basic static web pages and style them, DRY principle",
+    lessons:
+      "How to make basic static web pages and style them, DRY principle.",
   },
-  [ProjectId.Baltik]: {
-    name: "Baltík 3",
+  [ProjectId.Baltie]: {
+    name: "Baltie 3",
     active: "2003 - 2006",
-    summary: "My first contact with world of programming",
-    languages: [ProgrammingLanguage.Baltik],
+    summary: "My first contact with the world of programming",
+    languages: [ProgrammingLanguage.Baltie],
     image: "baltik.gif",
     lessons:
       "It is actually quite fun to give commands to a computer and watch it executing them precisely and tirelessly.",

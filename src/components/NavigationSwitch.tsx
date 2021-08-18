@@ -13,7 +13,7 @@ import {
   PROJECTS_URL,
 } from "../mappings";
 import { ProjectId } from "./projects/projects";
-import Baltik from "./projects/Baltik";
+import Baltie from "./projects/Baltie";
 import Minimoj from "./projects/Minimoj";
 import Okamih from "./projects/Okamih";
 import Jard from "./projects/Jard";
@@ -31,7 +31,7 @@ function NavigationSwitch() {
       <Route exact path={HOME_URL} component={Home} />
       <Route exact path={ABOUT_URL} component={About} />
       <Route exact path={PROJECTS_URL} component={Projects} />
-      <Route exact path={PROJECT_URL(ProjectId.Baltik)} component={Baltik} />
+      <Route exact path={PROJECT_URL(ProjectId.Baltie)} component={Baltie} />
       <Route exact path={PROJECT_URL(ProjectId.Minimoj)} component={Minimoj} />
       <Route exact path={PROJECT_URL(ProjectId.Okamih)} component={Okamih} />
       <Route
