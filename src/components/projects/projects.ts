@@ -52,6 +52,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     image: "personal-site.png",
     lessons:
       "How to showcase a portfolio and design a modern, responsive webpage.",
+    repository: "https://github.com/njuro/personal-site",
   },
   [ProjectId.MedicQuiz]: {
     name: "Medic Quiz",
@@ -65,6 +66,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     image: "medic-quiz.png",
     lessons:
       "How to digitize documents and parse them into meaningful structures.",
+    repository: "https://github.com/njuro/MedicQuiz-Public",
   },
   [ProjectId.AdventOfCode]: {
     name: "Advent of Code",
@@ -74,6 +76,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     image: "advent-of-code.png",
     lessons:
       "Increased knowledge of common algorithms, data structures, and Python/Kotlin standard libraries.",
+    repository: "https://github.com/njuro/advent-of-code-2020",
   },
   [ProjectId.MarriageStats]: {
     name: "Marriage Stats",

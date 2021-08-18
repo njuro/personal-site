@@ -194,8 +194,9 @@ function About() {
         TV Show?
       </Header>
       <p>
-        I loved watching Breaking Bad, Mr. Robot, or House of Cards. Right now I
-        am excited for the final season of La Casa De Papel
+        I loved watching <em>Breaking Bad</em>, <em>Mr. Robot</em>, or{" "}
+        <em>House of Cards</em>. Right now I am excited for the final season of{" "}
+        <em>La Casa De Papel</em>
       </p>
       <Header as="h4">
         <Icon name="question circle" color="grey" />
