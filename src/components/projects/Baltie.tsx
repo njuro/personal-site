@@ -10,8 +10,16 @@ function Baltie() {
         single computer appeared in our kindergarten class, which was unheard of
         at the time. I don&apos;t remember much, but I know we were taking turns
         in front of it, &quot;playing&quot; <em>Baltík / Baltie</em> - a
-        programming language and IDE designed for kids - quite similar to{" "}
-        <em>Scratch</em>, which seems to be popular nowadays.
+        programming language and IDE designed for kids - it eventually became{" "}
+        <a
+          href="https://www.sgpsys.com/cz/pic/Papert_Soukup_1998.jpg"
+          target="_blank"
+          rel="noreferrer"
+          className="content-link"
+        >
+          an inspiration for <em>Scratch</em>
+        </a>
+        , which seems to be popular nowadays.
       </p>
       <p>
         Created by Czech company{" "}

@@ -6,7 +6,7 @@ function Okamih() {
   return (
     <ProjectDetails project={PROJECTS[ProjectId.Okamih]}>
       <p>
-        In my highschool, there was a decades-old tradition of 3 months long{" "}
+        In my high school, there was a decades-old tradition of 3 months long{" "}
         <em>Olympic games</em>, organized by junior (3rd grade) students for the
         rest of the school. It consisted of many different games and events.
         When the time for me and my peers to organize came, I volunteered to

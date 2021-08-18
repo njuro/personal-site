@@ -29,8 +29,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     featured: true,
     name: "jard",
     active: "2017 - Present",
-    summary:
-      "My biggest and most ambitious project - software for anonymous imageboard management",
+    summary: "Software for anonymous imageboard management",
     languages: [
       ProgrammingLanguage.Java,
       ProgrammingLanguage.Kotlin,
@@ -56,7 +55,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
   },
   [ProjectId.MedicQuiz]: {
     name: "Medic Quiz",
-    active: "Medic Quiz",
+    active: "2020",
     summary: "Digitization and automatic evaluation of tests for future medics",
     languages: [
       ProgrammingLanguage.Kotlin,

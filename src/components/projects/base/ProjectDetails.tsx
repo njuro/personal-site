@@ -36,7 +36,9 @@ function ProjectDetails({ project, children }: ProjectDetailsProps) {
         )}
         <Header.Content>
           {project.name}
-          <Header.Subheader>{project.active}</Header.Subheader>
+          <Header.Subheader>
+            {project.summary} ({project.active})
+          </Header.Subheader>
         </Header.Content>
       </Header>
       {project.featured && (
