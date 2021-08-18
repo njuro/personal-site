@@ -6,15 +6,24 @@ function AdventOfCode() {
   return (
     <ProjectDetails project={PROJECTS[ProjectId.AdventOfCode]}>
       <p>
-        This isn’t really a side project, but I think it’s worth mentioning
-        here. For the last couple of years I have been participating in this
-        annual coding puzzle game. It takes place during Advent (hence the name)
-        and consists of 25 puzzles with one published each day. The puzzles can
-        be solved in any language. I did the first year in 2017 in Python and
-        other years in Kotlin (including past years, cause the archive of
-        puzzles is open to everyone). AoC is a great opportunity to play with a
-        new language, get more familiar with the standard library of language
-        you already use and brush up your algorithms and data structures skills.
+        This isn&apos;t really a side project, but I think it&apos;s worth
+        mentioning here. For the last couple of years, I have been participating
+        in this annual{" "}
+        <a
+          href="https://adventofcode.com/"
+          target="_blank"
+          className="content-link"
+          rel="noreferrer"
+        >
+          coding puzzle game
+        </a>
+        . It takes place during Advent (hence the name) and consists of 25
+        puzzles with one getting published each day. The puzzles can be solved
+        in any language. I did the first year in 2017 in Python and other years
+        in Kotlin (including past years, cause the archive of puzzles is open to
+        everyone). <em>AoC</em> is a great opportunity to play with a new
+        language, get more familiar with the standard library of language you
+        already use, and brush up on your algorithms and data structures skills.
       </p>
       <p>
         Last year I encouraged some of my colleagues to participate, we set up a
@@ -24,8 +33,8 @@ function AdventOfCode() {
       </p>
       <p>
         That being said, the biggest challenge for me in this competition is to
-        wake up everyday at 6 AM for almost a month, cause that’s when the
-        puzzle are published in my timezone :)
+        wake up every day at 6 AM for almost a month, cause that&apos;s when the
+        puzzles are published in my timezone :)
       </p>
     </ProjectDetails>
   );

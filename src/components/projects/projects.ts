@@ -69,11 +69,11 @@ export const PROJECTS: Record<ProjectId, Project> = {
   [ProjectId.AdventOfCode]: {
     name: "Advent of Code",
     active: "2017 - Present",
-    summary: "Annual coding event I participate in",
+    summary: "The annual coding event I participate in",
     languages: [ProgrammingLanguage.Kotlin, ProgrammingLanguage.Python],
     image: "advent-of-code.png",
     lessons:
-      "Increased knowledge of common algorithms, data structures and Python/Kotlin standard libraries.",
+      "Increased knowledge of common algorithms, data structures, and Python/Kotlin standard libraries.",
   },
   [ProjectId.MarriageStats]: {
     name: "Marriage Stats",
@@ -82,7 +82,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     languages: [ProgrammingLanguage.Python],
     image: "marriages.png",
     lessons:
-      "How to parse Excel sheets and plot graphs with Python. Also how to make quick money on side with programming.",
+      "How to parse Excel sheets and plot graphs with Python. Also how to make quick money on the side with programming.",
   },
   [ProjectId.UpdatRRR]: {
     name: "UpdatRRR",
