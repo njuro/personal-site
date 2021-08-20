@@ -141,7 +141,7 @@ function About() {
       <Goodreads />
       <Header as="h2">What is your current favorite...?</Header>
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         Operation system?
       </Header>
       <p>
@@ -157,7 +157,7 @@ function About() {
       </p>
 
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         Programming language?
       </Header>
       <p>
@@ -165,7 +165,7 @@ function About() {
         interoperability with Java
       </p>
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         IDE?
       </Header>
       <p>
@@ -174,7 +174,7 @@ function About() {
         programming language too!)
       </p>
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         Browser?
       </Header>
       <p>
@@ -182,7 +182,7 @@ function About() {
         and stop trying to be Chrome 2.0
       </p>
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         Compound lift?
       </Header>
       <p>
@@ -190,7 +190,7 @@ function About() {
         heavy weight above your head
       </p>
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         TV Show?
       </Header>
       <p>
@@ -199,7 +199,7 @@ function About() {
         <em>La Casa De Papel</em>
       </p>
       <Header as="h4">
-        <Icon name="question circle" color="grey" />
+        <Icon name="arrow alternate circle right" color="grey" />
         Conspiracy theory?
       </Header>
       <p>

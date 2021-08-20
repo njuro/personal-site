@@ -33,6 +33,13 @@ const MenuContainer = styled(Menu)`
       margin-right: 16px !important;
     }
   }
+
+  @media only screen and (max-width: 767px) {
+    & > .item {
+      display: inline-block !important;
+      text-align: center !important;
+    }
+  }
 `;
 function TopMenu() {
   return (
