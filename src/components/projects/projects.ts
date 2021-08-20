@@ -51,7 +51,7 @@ export const PROJECTS: Record<ProjectId, Project> = {
     ],
     image: "personal-site.png",
     lessons:
-      "How to showcase a portfolio and design a modern, responsive webpage.",
+      "How to showcase a portfolio and design a modern, responsive webpage. Also, CSS is more difficult than I remembered.",
     repository: "https://github.com/njuro/personal-site",
   },
   [ProjectId.MedicQuiz]: {
