@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Card, Image, Modal } from "semantic-ui-react";
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+import { Card, Image } from "semantic-ui-react";
 import styled from "styled-components";
 import { Project, ProjectId } from "../projects";
 import { ProgrammingLanguageLabel } from "./ProgrammingLanguage";
@@ -20,43 +20,23 @@ interface ProjectOverviewProps {
   project: Project;
 }
 function ProjectOverview({ id, project }: ProjectOverviewProps) {
-  const [open, setOpen] = useState<boolean>(false);
+  const history = useHistory();
 
   return (
     <Card>
-      <Modal
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        open={open}
-        trigger={
-          <Image
-            label={
-              project.featured
-                ? { as: "a", corner: "left", icon: "star", color: "yellow" }
-                : undefined
-            }
-            style={{ cursor: "pointer" }}
-            wrapped
-            ui={false}
-            src={`${PROJECTS_IMAGES_PATH}/${project.image}`}
-            alt={project.name}
-          />
+      <Image
+        label={
+          project.featured
+            ? { as: "a", corner: "left", icon: "star", color: "yellow" }
+            : undefined
         }
-      >
-        <Modal.Header>
-          <ProjectLink to={PROJECT_URL(id)}>
-            {project.name} ({project.active})
-          </ProjectLink>
-        </Modal.Header>
-        <Modal.Content image>
-          <Image
-            wrapped
-            size="massive"
-            src={`${PROJECTS_IMAGES_PATH}/${project.image}`}
-            alt={project.name}
-          />
-        </Modal.Content>
-      </Modal>
+        style={{ cursor: "pointer" }}
+        wrapped
+        ui={false}
+        src={`${PROJECTS_IMAGES_PATH}/${project.image}`}
+        onClick={() => history.push(PROJECT_URL(id))}
+        alt={project.name}
+      />
       <Card.Content>
         <Card.Header>
           <ProjectLink to={PROJECT_URL(id)}>{project.name}</ProjectLink>
