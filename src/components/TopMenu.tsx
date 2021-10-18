@@ -2,7 +2,13 @@ import React, { useContext } from "react";
 import { Header, Menu, MenuItemProps } from "semantic-ui-react";
 import styled from "styled-components";
 import { useHistory, Link } from "react-router-dom";
-import { ABOUT_URL, CONTACT_URL, HOME_URL, PROJECTS_URL } from "../mappings";
+import {
+  ABOUT_URL,
+  BLOG_URL,
+  CONTACT_URL,
+  HOME_URL,
+  PROJECTS_URL,
+} from "../mappings";
 import { NavigationContext } from "./App";
 
 function MenuItem({ path, children, ...rest }: MenuItemProps) {
@@ -69,6 +75,9 @@ function TopMenu() {
         </MenuItem>
         <MenuItem path={PROJECTS_URL} link>
           Projects
+        </MenuItem>
+        <MenuItem path={BLOG_URL} link>
+          Blog
         </MenuItem>
         <MenuItem path={CONTACT_URL} link>
           Contact

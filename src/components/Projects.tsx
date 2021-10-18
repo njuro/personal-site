@@ -33,11 +33,7 @@ function Projects() {
       <Divider section />
       <Card.Group centered>
         {Object.entries(PROJECTS).map(([id, project]) => (
-          <ProjectOverview
-            id={id as ProjectId}
-            project={project}
-            key={project.name}
-          />
+          <ProjectOverview id={id as ProjectId} project={project} key={id} />
         ))}
       </Card.Group>
     </div>

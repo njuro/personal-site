@@ -1,9 +1,12 @@
 import { ProjectId } from "./components/projects/projects";
+import { ArticleId } from "./components/articles/articles";
 
 export const HOME_URL = "/";
 export const ABOUT_URL = "/about";
 export const PROJECTS_URL = "/projects";
 export const PROJECT_URL = (id: ProjectId) => `${PROJECTS_URL}/${id}`;
+export const BLOG_URL = "/blog";
+export const ARTICLE_URL = (id: ArticleId) => `${BLOG_URL}/${id}`;
 export const CONTACT_URL = "/contact";
 export const NOT_FOUND_URL = "/404";
 export const PROJECTS_IMAGES_PATH = "/images/projects";

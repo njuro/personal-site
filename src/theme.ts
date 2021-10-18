@@ -54,6 +54,15 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   
+  a.article-link {
+    color: ${secondaryColor} !important;
+    border-bottom: 1px dotted gray !important;
+
+    :hover, :active {
+      color: lightgray !important;
+    }
+  }
+  
   .ui.header, .ui.segment {
     background-color: ${primaryColor} !important;
     color: ${secondaryColor} !important;

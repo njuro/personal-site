@@ -5,12 +5,14 @@ import { Divider, Header, Icon, Image, Label, Popup } from "semantic-ui-react";
 import { Project } from "../projects";
 import { PROJECTS_IMAGES_PATH, PROJECTS_URL } from "../../../mappings";
 import { ProgrammingLanguageLabel } from "./ProgrammingLanguage";
+import useNavigation from "../../../useNavigation";
 
 interface ProjectDetailsProps {
   project: Project;
   children: React.ReactNode;
 }
 function ProjectDetails({ project, children }: ProjectDetailsProps) {
+  useNavigation(PROJECTS_URL);
   return (
     <div>
       <Helmet title={project.name} />

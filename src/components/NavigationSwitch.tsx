@@ -7,6 +7,8 @@ import Contact from "./Contact";
 import NotFound from "./NotFound";
 import {
   ABOUT_URL,
+  ARTICLE_URL,
+  BLOG_URL,
   CONTACT_URL,
   HOME_URL,
   PROJECT_URL,
@@ -24,12 +26,16 @@ import MarriageStats from "./projects/MarriageStats";
 import UpdatRRR from "./projects/UpdatRRR";
 import Minecraft from "./projects/Minecraft";
 import ChatBot from "./projects/ChatBot";
+import Blog from "./Blog";
+import { ArticleId } from "./articles/articles";
+import Interviews from "./articles/Interviews";
 
 function NavigationSwitch() {
   return (
     <Switch>
       <Route exact path={HOME_URL} component={Home} />
       <Route exact path={ABOUT_URL} component={About} />
+
       <Route exact path={PROJECTS_URL} component={Projects} />
       <Route exact path={PROJECT_URL(ProjectId.Baltie)} component={Baltie} />
       <Route exact path={PROJECT_URL(ProjectId.Minimoj)} component={Minimoj} />
@@ -66,6 +72,13 @@ function NavigationSwitch() {
         component={PersonalSite}
       />
       <Route exact path={PROJECT_URL(ProjectId.Jard)} component={Jard} />
+
+      <Route exact path={BLOG_URL} component={Blog} />
+      <Route
+        exact
+        path={ARTICLE_URL(ArticleId.Interviews)}
+        component={Interviews}
+      />
       <Route exact path={CONTACT_URL} component={Contact} />
       <Route component={NotFound} />
     </Switch>
