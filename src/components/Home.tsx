@@ -12,6 +12,7 @@ function Home() {
     <div style={{ textAlign: "center", fontSize: "18px" }}>
       <Image
         circular
+        bordered
         size="medium"
         src="/images/profile-picture.jpg"
         style={{
