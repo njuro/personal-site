@@ -45,7 +45,22 @@ function Minimoj() {
         My dad helped me to put it online, utilizing free web hosting space
         provided by our ISP to their clients. Amazingly, 14 years later, the
         website is still available and you can fully appreciate the efforts of
-        my 10 years old self.
+        my 10 years old self (
+        <em>
+          Update: this is no longer the case. The ISP stopped to provide this
+          service in October 2021. Fortunately, I managed to archive the page
+          for your viewing pleasure{" "}
+          <a
+            href="https://web.archive.org/web/20210721072559/http://members.chello.sk/michal.noge/minimoj.html"
+            className="content-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            here
+          </a>
+          .)
+        </em>
+        .
       </p>
       <p>
         There was also a second website of mine around that time, this time
