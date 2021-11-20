@@ -195,7 +195,7 @@ function About() {
       </Header>
       <p>
         I loved watching <em>Breaking Bad</em>, <em>Mr. Robot</em>, or{" "}
-        <em>House of Cards</em>. Right now I am excited for the final season of{" "}
+        <em>BoJack Horseman</em>. Right now I am excited for the final season of{" "}
         <em>La Casa De Papel</em>
       </p>
       <Header as="h4">
