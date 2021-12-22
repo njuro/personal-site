@@ -23,7 +23,7 @@ function About() {
       <Helmet title="About" />
       <Header as="h2">Who the hell are you?</Header>
       <p>
-        A 23 years old guy who likes to command computers, in order to make life
+        A 24 years old guy who likes to command computers, in order to make life
         easier for him, or others. I was born & raised in{" "}
         <em>Bratislava, Slovakia</em> and currently reside in{" "}
         <em>Brno, Czech Republic</em>.
