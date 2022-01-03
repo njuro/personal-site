@@ -103,12 +103,12 @@ function About() {
         My current company is{" "}
         <strong>
           <a
-            href="https://cleverfarm.ag"
+            href="https://productboard.com"
             target="_blank"
             rel="noreferrer"
             className="content-link"
           >
-            CleverFarm
+            Productboard
           </a>
         </strong>
         . As for side projects, this information changes so often, that the best
